@@ -10,7 +10,7 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f8f8f8;
+    background-color: #09fa7a; /*#f8f8f8;*/
     color: #333;
     margin: 0;
     padding: 0;
@@ -28,21 +28,46 @@ header {
     padding: 20px;
     text-align: center;
     width : 100%;
-
 }
 
 header h1 {
     font-size: 2.5rem;
+    background-color: #d85959; /* Couleur de fond pour le div principal */
+
 }
 
 /* Styles du contenu principal */
+/* Styles pour le contenu principal */
+/* Styles pour le contenu principal */
 main {
-    flex: 1; /* Le contenu principal s'étend pour remplir l'espace disponible */
+    flex: 1;
+    display: flex;
+    background-color: #500000; /* Couleur de fond pour le div principal */
+    overflow-y: hidden;
 }
 
-main img {
-    width: 30%;
+/* Div principal */
+#content {
+    background-color: #98db14;
+    flex: 1;
+    display: flex;
 }
+
+/* Styles pour l'image */
+#content img {/* L'image occupe tout l'espace disponible dans le div content */
+  /*  max-width: 100%; /* Pour que l'image ne dépasse pas la largeur du div 
+    height: auto; /* La hauteur de l'image est ajustée automatiquement */
+    background-color: #3814db;
+    width: 50%;
+}
+
+/* Styles pour le div texte */
+#text {  /* Le div texte occupe tout l'espace disponible dans le div content */
+    background-color: #bb1fae; /* Couleur de fond pour le div de texte 
+    padding: 20px; /* Espacement intérieur 
+    color: white; /* Couleur du texte */
+}
+
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////*/
 /* Styles du pied de page */
