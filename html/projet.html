@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="../css/style-projet.css">
+</head>
+<body>
+
+<header>
+    <h1>Mon Portfolio</h1>
+    <a href="#" id="return-link">Retour</a>
+
+    <script>
+        // Récupérer les paramètres de l'URL (dans la query string)
+        const params = new URLSearchParams(window.location.search);
+        const projectId = params.get("id");
+
+        const returnLink = document.getElementById("return-link");
+
+        if (projectId === "1") {
+            returnLink.href = "../index.html#1";
+        } else if (projectId === "2") {
+            returnLink.href = "../index.html#2";
+        } else if (projectId === "3") {
+            returnLink.href = "../index.html#3";
+        } else {
+            returnLink.href = "../index.html";
+        }
+    </script>
+</header>
+
+<main>
+    <div id="content">
+        <div id="image">
+            <video id="project-video" width="640" height="360" controls>
+                <source src="" type="video/mp4">
+                Votre navigateur ne supporte pas la lecture de vidéos.
+            </video>
+        </div>
+        <div id="text">
+            <h1 id="project-title"></h1>
+
+            <div id="project-text">
+
+            </div>
+
+            <div id="project-skills">
+                <p class="skill">Java</p>
+                <p class="skill">JavaFX</p>
+                <p class="skill">MySQL</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2024 Mon Portfolio. Tous droits réservés.</p>
+</footer>
+
+<script src="../js/projet.js"></script>
+</body>
+</html>

@@ -1,12 +1,11 @@
 const texteIntro = document.querySelector("#texteIntro");
 const curseur = document.querySelector("#curseur");
-const emojie = document.querySelector("#emojie");
-const main = document.querySelector("main");
 const accueil = document.querySelector("#accueil");
-const projets = document.querySelector("#projets");
+//const projets = document.querySelector("#html");
 const header = document.querySelector("header");
-const text = "Bienvenue dans mon site portfolio, scrollez vers le bas pour en apprendre plus sur moi."
-var scrollPosition = 0;
+
+const text = "Bienvenue sur mon site portfolio, scrollez vers le bas pour en apprendre plus sur moi."
+let scrollPosition = 0;
 
 function textTypingEffect(element, text, i = 0) {
     
@@ -41,23 +40,26 @@ function isElementVisible(element) {
 // Fonction pour afficher un projet lorsqu'il est visible
 function showProjectWhenVisible() {
     const projects = document.querySelectorAll('.projet');
-
-    projects.forEach(project => {
+    
+    projects.forEach((project, index) => {
+        // Vérifier si le projet est visible
         if (isElementVisible(project)) {
-            project.classList.add('visible');
+            if (index % 2 === 0) {
+                project.classList.add('even');
+            } else {
+                project.classList.add('odd');
+            }
         }
     });
 
     // Vérifier si l'utilisateur a fait défiler vers le bas
     if (window.scrollY > scrollPosition) {
         accueil.classList.remove('section'); 
-        accueil.classList.add('visible');  
-        projets.classList.remove('section')
-        projets.classList.add('visible');  
-        header.querySelector('h1').textContent = ""
+        accueil.classList.add('visible');
+        header.classList.add('visible');
     }
 
-    if (window.scrollY > 20) { 
+    if (window.scrollY > 500) {
         header.querySelector('h1').textContent = ""
     }else{
         header.querySelector('h1').textContent = "Mon Portfolio"
@@ -65,8 +67,5 @@ function showProjectWhenVisible() {
     scrollPosition = window.scrollY 
 }
 
-
 textTypingEffect(texteIntro, text);
-
-// Ajouter un écouteur d'événements de défilement pour vérifier la visibilité des projets
 window.addEventListener('scroll', showProjectWhenVisible);

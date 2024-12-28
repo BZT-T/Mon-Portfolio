@@ -4,6 +4,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+html {
+    scroll-padding-top: 80px; /* Ajustez à la hauteur de votre header */
+}
+
 /*////////////////////////////////////////////////////////////////////////////////////////////////*/
 /* Styles généraux */
 /*////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -28,8 +33,14 @@ header {
     padding: 20px;
     text-align: center;
     position : fixed;
-    z-Index : 9999; 
+    z-Index : 9999;
     width : 100%;
+    display: none;
+}
+
+header.visible {
+    display: block;  /* Afficher le header lorsque la classe 'visible' est ajoutée */
+    opacity: 1; /* Rendre l'élément visible */
 }
 
 header h1 {
@@ -163,11 +174,22 @@ footer {
     color: #666; /* Couleur du texte */
 }
 
+#timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
 /*////////////////////////////////////////////////////////////////////////////////////////////////*/
 /* Styles pour la section Projet */
 /*////////////////////////////////////////////////////////////////////////////////////////////////*/
-
-
 .projet {
     background-color: #fff;
     border-radius: 8px;
@@ -184,7 +206,7 @@ footer {
 }
 
 .projet-content {
-    flex: 1; /* La partie texte prend tout l'espace disponible */
+    flex: 1;
 }
 
 .projet h3 {
@@ -195,19 +217,19 @@ footer {
 .projet img {
     max-width: 200px;
     max-height: 200px;
-    margin-right: 20px; /* Marge à droite pour l'espace entre l'image et le texte */
+    margin-right: 20px;
 }
 
-.projet.visible:nth-child(even) {
+.projet.even {
     animation: slideInFromRight 1s ease-in-out forwards;
-} 
-  
-.projet.visible:nth-child(odd) {
+}
+
+.projet.odd {
     animation: slideInFromLeft 1s ease-in-out forwards;
 }
 
 #projets a {
-    /* Styles spécifiques pour les liens dans les projets */
+    /* Styles spécifiques pour les liens dans les html */
     text-decoration: none; /* Supprimer le soulignement */
     color: inherit; /* Utiliser la couleur du texte parent */
 }
@@ -247,3 +269,66 @@ footer {
     margin-bottom: 10px;
 }
 
+/*////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* Styles pour la section de contact */
+/*////////////////////////////////////////////////////////////////////////////////////////////////*/
+#contact {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: flex;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group button {
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    background-color: #009688;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-group button:hover {
+    background-color: #00796B;
+}
+
+.contact-info {
+    margin-top: 40px;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.contact-info a {
+    color: #009688;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}

@@ -10,7 +10,6 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #09fa7a; /*#f8f8f8;*/
     color: #333;
     margin: 0;
     padding: 0;
@@ -26,46 +25,109 @@ header {
     background-color: #333;
     color: #fff;
     padding: 20px;
+    display: flex; /* Utiliser flexbox pour aligner les éléments horizontalement */
+    justify-content: space-between; /* Espace égal entre les éléments */
     text-align: center;
     width : 100%;
 }
 
 header h1 {
     font-size: 2.5rem;
-    background-color: #d85959; /* Couleur de fond pour le div principal */
 
 }
+#return-link {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px; /* Coins arrondis */
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition pour hover */
+}
 
-/* Styles du contenu principal */
-/* Styles pour le contenu principal */
-/* Styles pour le contenu principal */
+#return-link:hover {
+    transform: scale(1.05); /* Légère augmentation de la taille au survol */
+}
+
+#return-link:active {
+    transform: scale(0.95); /* Réduit légèrement la taille lors du clic */
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* Styles du body */
+/*////////////////////////////////////////////////////////////////////////////////////////////////*/
 main {
     flex: 1;
     display: flex;
-    background-color: #500000; /* Couleur de fond pour le div principal */
     overflow-y: hidden;
 }
 
 /* Div principal */
 #content {
-    background-color: #98db14;
     flex: 1;
     display: flex;
 }
 
 /* Styles pour l'image */
-#content img {/* L'image occupe tout l'espace disponible dans le div content */
-  /*  max-width: 100%; /* Pour que l'image ne dépasse pas la largeur du div 
-    height: auto; /* La hauteur de l'image est ajustée automatiquement */
-    background-color: #3814db;
-    width: 50%;
+#image {
+    width: 50%; /* Image prend 50% de la largeur du parent */
+    align-content: center;
 }
 
-/* Styles pour le div texte */
-#text {  /* Le div texte occupe tout l'espace disponible dans le div content */
-    background-color: #bb1fae; /* Couleur de fond pour le div de texte 
-    padding: 20px; /* Espacement intérieur 
-    color: white; /* Couleur du texte */
+#image video {
+
+    width: 100%; /* Image prend 50% de la largeur du parent */
+    object-fit: cover; /* Coupe l'image pour l'adapter à la boîte */
+    border-radius: 10px; /* Arrondit les coins pour un effet de "boîte" */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre pour un effet flottant */
+    border: 5px solid #f0f0f0; /* Bordure blanche ou claire autour de l'image */
+    overflow: hidden; /* Cache les débordements de l'image */
+}
+/* Styles du contenue */
+#text {
+    padding: 20px;
+    border-radius: 10px; /* Coins arrondis */
+   /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Légère ombre */
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+#text h1 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    text-align: center; /* Centre le titre */
+    font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
+}
+
+#description p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    text-align: justify; /* Justifie le texte pour une présentation professionnelle */
+}
+
+#project-skills {
+    display: flex;
+    justify-content: center; /* Centre les compétences */
+    gap: 15px; /* Espacement entre chaque compétence */
+    margin-top: 20px;
+}
+
+.skill {
+    background-color: #009688;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Effet d'ombre légère */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Animation au survol */
+}
+
+.skill:hover {
+    background-color: #00796B;
+    transform: scale(1.1); /* Agrandir légèrement au survol */
 }
 
 
@@ -77,7 +139,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px;
-    margin-top: auto; /* Le footer est poussé vers le bas de la page */    
+    margin-top: auto; /* Le footer est poussé vers le bas de la page */
 }
 
 

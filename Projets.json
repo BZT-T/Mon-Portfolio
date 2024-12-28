@@ -1,0 +1,25 @@
+{
+  "projets": [
+    {
+      "id": 1,
+      "titre": "Application de Vote Électronique",
+      "texte": "<p>Dans ce projet scolaire de groupe, nous avons réalisé la conception et le développement d'une application client-serveur de vote électronique, avec une base de données.</p> <p>Cette application a pour objectif de faciliter les prises de décisions à l'intérieur d'une entreprise.</p>",
+      "urlVideo": "../video/eVote.mp4",
+      "jetons": ["Java","JavaFX","MySQL"]
+    },
+    {
+      "id": 2,
+      "titre": "Application de Sauvegarde",
+      "texte": "<p>Dans ce projet scolaire, j'ai réalisé la conception et le développement d'une application client-serveur de sauvegarde à distance, avec une base de données.</p>",
+      "urlVideo": "../video/Fisabilillah.mp4",
+      "jetons": ["WLangage","MySQL"]
+    },
+    {
+      "id": 3,
+      "titre": "Fisabilillah",
+      "texte": "<p>Fisabilillah est un projet personnel à but non lucratif développé pour une association. Cette application a pour objectif de faciliter la gestion des élèves en permettant de suivre leurs progrès tout en centralisant des informations importantes, telles que les coordonnées de leurs parents. Elle intègre également une dimension financière, offrant à l'association les outils nécessaires pour gérer ses dépenses et ses collectes de fonds.</p>",
+      "urlVideo": "../video/Fisabilillah.mp4",
+      "jetons": ["WLangage","MySQL"]
+    }
+  ]
+}

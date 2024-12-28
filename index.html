@@ -38,15 +38,16 @@
         <div class="container">
             <div class="accueil-content">
                 <h2>Qui suis-je ?</h2>
-                <p>Salut, je m'appelle Yassine Bouazzati, et je suis étudiant en Informatique. J'ai une passion pour le développement</p>
+                <p>Salut, je m'appelle Yassine Bouazzati, mon objectif est de participer au développement de notre société à l'aide de mes compétences en développement informatique !</p>
             </div>
         </div>
     </section>
-    
+
+
     <section id="projets" class="section">
         <h2>Mes Projets</h2>
-        <a href="projets/e-Vote.html">
-            <div class="projet">
+        <a href="html/projet.html?id=1">
+            <div class="projet" id="1">
                     <img src="images/Vote.png" alt="Image Projet 1">
                     <div class="projet-content">
                         <h3>Application de Vote Électronique</h3>
@@ -54,27 +55,24 @@
                     </div>  
             </div>
         </a>
-        <div class="projet">
-            <div class="projet-content">
-                <h3>PiWi</h3>
-                <p>Une application CRM et ERP intégrée offrant une gestion complète de la relation client ainsi que des processus métiers pour les distributeurs d'équipements informatiques et logiciels.</p>
+        <a href="html/projet.html?id=2">
+            <div class="projet" id="2">
+                <div class="projet-content">
+                    <h3>KeepSafe</h3>
+                    <p>Une application de sauvegarde sécurisée pour vos données personnelles, offrant à la fois la possibilité de les stocker en toute sécurité et de les récupérer à tout moment.</p>
+                </div>
+                <img src="images/sauvegarde.png" alt="Image Projet 3">
             </div>
-            <img src="images/Logo_PiWi.png" alt="Image Projet 2">
-        </div>
-        <div class="projet">
-            <img src="images/sauvegarde.png" alt="Image Projet 3">
-            <div class="projet-content">
-                <h3>KeepSafe</h3>
-                <p>Une application de sauvegarde sécurisée pour vos données personnelles, offrant à la fois la possibilité de les stocker en toute sécurité et de les récupérer à tout moment.</p>
-            </div>  
-        </div>
-        <div class="projet">
-            <div class="projet-content">
-                <h3>Fissabililah</h3>
-                <p>Un système ERP conçu pour la gestion d'élèves et la comptabilité au sein d'associations éducatives. Fissabililah simplifie la gestion administrative.</p>
+        </a>
+        <a href="html/projet.html?id=3">
+            <div class="projet">
+                <img src="images/Fissabilillah.png" alt="Image Projet 4">
+                <div class="projet-content" id="3">
+                    <h3>Fissabililah</h3>
+                    <p>Un système ERP conçu pour la gestion d'élèves et la comptabilité au sein d'associations éducatives. Fissabililah simplifie la gestion administrative.</p>
+                </div>
             </div>
-            <img src="images/Fissabilillah.png" alt="Image Projet 4">
-        </div>
+        </a>
     </section>
     
 
@@ -83,12 +81,33 @@
         <h2>À Propos de Moi</h2>
         <p>Bonjour à tous, je m'appelle Yassine Bouazzati. J'ai <span id="age"></span> ans et je suis étudiant en BUT informatique dans le parcours DACS (développement d'applications communicantes et sécurisées) à l'IUT de Montpellier. Passionné d'informatique depuis le lycée, je me spécialise dans la création d'applications qui répondent aux besoins des utilisateurs tout en garantissant leur sécurité. Avec mes compétences en développement, en communication et en sécurité informatique, je suis en mesure de proposer des solutions innovantes et fiables pour répondre à des besoins professionnels ou personnels.</p>
     </section>
-    
+
 
     <section id="contact" class="section">
         <h2>Contact</h2>
-        <!-- Ajoutez ici un formulaire de contact ou des informations de contact -->
+
+        <form action="https://formspree.io/f/mbllonlz" method="POST" id="contact-form">
+            <div class="form-group">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" required placeholder="Votre nom" />
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required placeholder="Votre email" />
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" required placeholder="Votre message" rows="5"></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Envoyer</button>
+            </div>
+        </form>
     </section>
+
 </main>
 
 <footer>
